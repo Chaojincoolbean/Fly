@@ -1197,7 +1197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &45911862
 Transform:
   m_ObjectHideFlags: 0
@@ -1377,6 +1377,7 @@ GameObject:
   - component: {fileID: 59497871}
   - component: {fileID: 59497870}
   - component: {fileID: 59497875}
+  - component: {fileID: 59497876}
   m_Layer: 0
   m_Name: LeftController
   m_TagString: Untagged
@@ -1555,6 +1556,18 @@ MonoBehaviour:
   controllerEvents: {fileID: 0}
   interactTouch: {fileID: 0}
   interactGrab: {fileID: 0}
+--- !u!114 &59497876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59497868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d714e84a9f802449251d4bee908eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rcCar: {fileID: 135180290}
 --- !u!1 &67892217
 GameObject:
   m_ObjectHideFlags: 0
@@ -39268,7 +39281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1575192949
 Transform:
   m_ObjectHideFlags: 0
@@ -45461,6 +45474,7 @@ GameObject:
   - component: {fileID: 1863400177}
   - component: {fileID: 1863400176}
   - component: {fileID: 1863400181}
+  - component: {fileID: 1863400182}
   m_Layer: 0
   m_Name: RightController
   m_TagString: Untagged
@@ -45639,6 +45653,18 @@ MonoBehaviour:
   controllerEvents: {fileID: 0}
   interactTouch: {fileID: 0}
   interactGrab: {fileID: 0}
+--- !u!114 &1863400182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1863400174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d714e84a9f802449251d4bee908eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rcCar: {fileID: 135180290}
 --- !u!1 &1864401662
 GameObject:
   m_ObjectHideFlags: 0
