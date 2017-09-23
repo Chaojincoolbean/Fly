@@ -4,22 +4,34 @@ using UnityEngine;
 
 public class DebugScript : MonoBehaviour {
 
-	public GameObject Floor;
+	public bool IsDebug;
 	public GameObject Camera;
+	public GameObject LeftController;
+	public GameObject RightController;
 
 
 	// Use this for initialization
 	void Start () {
 
-		Debug.Log ("startfloor:" + Floor.gameObject.transform.position);
-		Debug.Log ("startcamera:" + Camera.gameObject.transform.position);
+		if (IsDebug == true) {
+
+			Debug.Log ("startCamera:" + Camera.gameObject.transform.position);
+			Debug.Log ("startLeftController:" + LeftController.gameObject.transform.position);
+			Debug.Log ("startRightController:" + RightController.gameObject.transform.position);
+		}
+
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		Debug.Log ("floor:" + Floor.gameObject.transform.position);
-		Debug.Log ("camera:" + Camera.gameObject.transform.position);
+		if (IsDebug == true) {
+
+			Debug.Log ("camera:" + Camera.gameObject.transform.position);
+			Debug.Log ("LeftController:" + LeftController.gameObject.transform.position);
+			Debug.Log ("RightController:" + RightController.gameObject.transform.position);
+		}
+
 	}
 }
