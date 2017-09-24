@@ -21676,7 +21676,6 @@ GameObject:
   - component: {fileID: 849144645}
   - component: {fileID: 849144644}
   - component: {fileID: 849144646}
-  - component: {fileID: 849144647}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -21735,26 +21734,6 @@ MonoBehaviour:
   - {fileID: 1575192948}
   - {fileID: 130903889}
   - {fileID: 632850487}
---- !u!114 &849144647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 849144643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d7668a954b04b9496906e1572140ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraRig: {fileID: 231761835}
-  LeftController: {fileID: 239486775}
-  RightController: {fileID: 1737010719}
-  LLT: {x: 0, y: 0, z: 0}
-  LRT: {x: 0, y: 0, z: 0}
-  CLT: {x: 0, y: 0, z: 0}
-  CRT: {x: 0, y: 0, z: 0}
-  StandandY: 1.4
-  FlyYDistance: 100
 --- !u!1 &851100938
 GameObject:
   m_ObjectHideFlags: 0
