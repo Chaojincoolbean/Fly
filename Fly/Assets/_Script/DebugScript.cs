@@ -26,7 +26,7 @@ public class DebugScript : MonoBehaviour {
 
 		InputDebug ();
 
-
+		CameraMoveDebug ();
 
 	}
 
