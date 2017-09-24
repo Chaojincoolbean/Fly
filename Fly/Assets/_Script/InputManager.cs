@@ -12,31 +12,39 @@ public class InputManager : MonoBehaviour {
 	public Transform CLT; //CLT = CurrentLeftControllerTransform
 	public Transform CRT; //CRT = CurrentRightControllerTransform
 	public float StandandY = 1.4f; //Where the player's arm is on Y position when they raise
+	public float initTimeDelay = 4f;
 
 	// Use this for initialization
 	void Start () {
 
-		LLT.position = LeftController.transform.position;
-		LRT.position = RightController.transform.position;
+		LLT.position = Vector3.zero;
+		LRT.position = Vector3.zero;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		CLT.position = LeftController.transform.position;
-		CRT.position = RightController.transform.position;
-
-		if ((CLT.position.y < StandandY) &(LLT.position.y > StandandY)
-			&(CRT.position.y < StandandY) & (LRT.position.y > StandandY)) {
-
-			CameraRig.gameObject.transform.position = new Vector3 (CameraRig.gameObject.transform.position.x, 
-				CameraRig.gameObject.transform.position.y + 1f, 
-				CameraRig.gameObject.transform.position.z);
+		if (Time.time > initTimeDelay) {
+			
 		}
 
-		LLT.position = CLT.position;
-		LRT.position = CRT.position;
+//		CLT.position = LeftController.transform.position;
+//		CRT.position = RightController.transform.position;
+//
+//		if ((CLT.position.y < StandandY) &(LLT.position.y > StandandY)
+//			&(CRT.position.y < StandandY) & (LRT.position.y > StandandY)) {
+//
+//			CameraRig.gameObject.transform.position = new Vector3 (CameraRig.gameObject.transform.position.x, 
+//				CameraRig.gameObject.transform.position.y + 1f, 
+//				CameraRig.gameObject.transform.position.z);
+//		}
+//
+//		LLT.position = CLT.position;
+//		LRT.position = CRT.position;
+
+		Debug.Log ("left:"+ LeftController.transform.position);
+		Debug.Log ("right:"+ RightController.transform.position);
 		
 	}
 }
