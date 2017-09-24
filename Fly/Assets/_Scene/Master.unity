@@ -5853,7 +5853,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 220505799}
-  m_LocalRotation: {x: -0.13039497, y: -0.72057605, z: -0.6680775, w: 0.13205934}
+  m_LocalRotation: {x: -0.13039498, y: -0.7205761, z: -0.6680776, w: 0.13205935}
   m_LocalPosition: {x: 16.99, y: 0.56, z: -1.15}
   m_LocalScale: {x: 0.20000015, y: 0.73330235, z: 0.20000017}
   m_Children: []
@@ -21676,6 +21676,7 @@ GameObject:
   - component: {fileID: 849144645}
   - component: {fileID: 849144644}
   - component: {fileID: 849144646}
+  - component: {fileID: 849144647}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -21698,6 +21699,7 @@ MonoBehaviour:
   DebugLeftController: 0
   DebugRightController: 0
   DebugCameraMove: 0
+  DebugPointer: 0
   Camera: {fileID: 231761835}
   LeftController: {fileID: 239486775}
   RightController: {fileID: 1737010719}
@@ -21733,6 +21735,25 @@ MonoBehaviour:
   - {fileID: 1575192948}
   - {fileID: 130903889}
   - {fileID: 632850487}
+--- !u!114 &849144647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 849144643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d7668a954b04b9496906e1572140ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraRig: {fileID: 231761835}
+  LeftController: {fileID: 239486775}
+  RightController: {fileID: 1737010719}
+  LLT: {fileID: 0}
+  LRT: {fileID: 0}
+  CLT: {fileID: 0}
+  CRT: {fileID: 0}
+  StandandY: 1.4
 --- !u!1 &851100938
 GameObject:
   m_ObjectHideFlags: 0

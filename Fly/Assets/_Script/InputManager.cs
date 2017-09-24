@@ -30,9 +30,9 @@ public class InputManager : MonoBehaviour {
 		if ((CLT.position.y < StandandY) &(LLT.position.y > StandandY)
 			&(CRT.position.y < StandandY) & (LRT.position.y > StandandY)) {
 
-			Camera.gameObject.transform.position = new Vector3 (Camera.gameObject.transform.position.x, 
-				Camera.gameObject.transform.position.y + 1f, 
-				Camera.gameObject.transform.position.z);
+			CameraRig.gameObject.transform.position = new Vector3 (CameraRig.gameObject.transform.position.x, 
+				CameraRig.gameObject.transform.position.y + 1f, 
+				CameraRig.gameObject.transform.position.z);
 		}
 
 		LLT.position = CLT.position;
