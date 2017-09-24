@@ -30,14 +30,17 @@ public class InputManager : MonoBehaviour {
 
 			if ((CLT.y < StandandY) & (LLT.y > StandandY)
 			   & (CRT.y < StandandY) & (LRT.y > StandandY)) {
-
+				Debug.Log("fly");
 				CameraRig.gameObject.transform.position = new Vector3 (CameraRig.gameObject.transform.position.x, 
-				CameraRig.gameObject.transform.position.y + FlyYDistance, 
-					CameraRig.gameObject.transform.position.z);
-			}
+																	   CameraRig.gameObject.transform.position.y + FlyYDistance, 
+																	   CameraRig.gameObject.transform.position.z);
 
-			LLT = CLT;
-			LRT = CRT;
-		
+				LLT = CLT;
+				LRT = CRT;
+			Debug.Log (LLT.y, LRT.y);
 	}
+
+		Debug.Log (CLT.y, CRT.y);
+
+
 }
