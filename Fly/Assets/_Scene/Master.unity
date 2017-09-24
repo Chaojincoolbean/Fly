@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableTeleport: 1
   targetListPolicy: {fileID: 0}
-  pointerRenderer: {fileID: 0}
+  pointerRenderer: {fileID: 59497877}
   activationButton: 10
   holdButtonToActivate: 1
   activateOnEnable: 0
@@ -45543,7 +45543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableTeleport: 1
   targetListPolicy: {fileID: 0}
-  pointerRenderer: {fileID: 0}
+  pointerRenderer: {fileID: 1863400183}
   activationButton: 10
   holdButtonToActivate: 1
   activateOnEnable: 0
