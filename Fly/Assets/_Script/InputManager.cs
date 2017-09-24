@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour {
 	public Vector3  CLT; //CLT = CurrentLeftControllerPosition
 	public Vector3  CRT; //CRT = CurrentRightControllerPosition
 	public float StandandY = 1.4f; //Where the player's arm is on Y position when they raise
-	//public float initTimeDelay = 4f;
+	public float FlyYDistance;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +24,6 @@ public class InputManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//if (Time.time > initTimeDelay) {
 			
 			CLT = LeftController.transform.position;
 			CRT = RightController.transform.position;
@@ -33,14 +32,12 @@ public class InputManager : MonoBehaviour {
 			   & (CRT.y < StandandY) & (LRT.y > StandandY)) {
 
 				CameraRig.gameObject.transform.position = new Vector3 (CameraRig.gameObject.transform.position.x, 
-					CameraRig.gameObject.transform.position.y + 1f, 
+				CameraRig.gameObject.transform.position.y + FlyYDistance, 
 					CameraRig.gameObject.transform.position.z);
 			}
 
 			LLT = CLT;
 			LRT = CRT;
-
-		//}
 		
 	}
 }

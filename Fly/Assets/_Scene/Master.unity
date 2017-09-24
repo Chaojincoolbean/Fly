@@ -21749,11 +21749,12 @@ MonoBehaviour:
   CameraRig: {fileID: 231761835}
   LeftController: {fileID: 239486775}
   RightController: {fileID: 1737010719}
-  LLT: {fileID: 0}
-  LRT: {fileID: 0}
-  CLT: {fileID: 0}
-  CRT: {fileID: 0}
+  LLT: {x: 0, y: 0, z: 0}
+  LRT: {x: 0, y: 0, z: 0}
+  CLT: {x: 0, y: 0, z: 0}
+  CRT: {x: 0, y: 0, z: 0}
   StandandY: 1.4
+  FlyYDistance: 100
 --- !u!1 &851100938
 GameObject:
   m_ObjectHideFlags: 0
