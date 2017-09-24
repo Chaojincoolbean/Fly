@@ -7,6 +7,7 @@ public class DebugScript : MonoBehaviour {
 	public bool DebugCamera;
 	public bool DebugLeftController;
 	public bool DebugRightController;
+	public bool DebugCameraMove;
 	public GameObject Camera;
 	public GameObject LeftController;
 	public GameObject RightController;
@@ -25,6 +26,8 @@ public class DebugScript : MonoBehaviour {
 
 		InputDebug ();
 
+
+
 	}
 
 	void InputDebug(){
@@ -40,6 +43,18 @@ public class DebugScript : MonoBehaviour {
 		if (DebugRightController == true) {
 
 			Debug.Log ("startRightController:" + RightController.gameObject.transform.position);
+		}
+	}
+
+	void CameraMoveDebug(){
+
+		if (DebugCameraMove == true) {
+		
+			Camera.gameObject.transform.position = new Vector3 (Camera.gameObject.transform.position.x, 
+																Camera.gameObject.transform.position.y + 1f, 
+																Camera.gameObject.transform.position.z);
+
+			Debug.Log ("CameraPosition:" + Camera.gameObject.transform.position);
 		}
 	}
 }
