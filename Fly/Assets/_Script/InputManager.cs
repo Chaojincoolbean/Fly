@@ -27,24 +27,22 @@ public class InputManager : MonoBehaviour {
 
 		if (Time.time > initTimeDelay) {
 			
+
+			CLT.position = LeftController.transform.position;
+			CRT.position = RightController.transform.position;
+
+			if ((CLT.position.y < StandandY) & (LLT.position.y > StandandY)
+			   & (CRT.position.y < StandandY) & (LRT.position.y > StandandY)) {
+
+				CameraRig.gameObject.transform.position = new Vector3 (CameraRig.gameObject.transform.position.x, 
+					CameraRig.gameObject.transform.position.y + 1f, 
+					CameraRig.gameObject.transform.position.z);
+			}
+
+			LLT.position = CLT.position;
+			LRT.position = CRT.position;
+
 		}
-
-//		CLT.position = LeftController.transform.position;
-//		CRT.position = RightController.transform.position;
-//
-//		if ((CLT.position.y < StandandY) &(LLT.position.y > StandandY)
-//			&(CRT.position.y < StandandY) & (LRT.position.y > StandandY)) {
-//
-//			CameraRig.gameObject.transform.position = new Vector3 (CameraRig.gameObject.transform.position.x, 
-//				CameraRig.gameObject.transform.position.y + 1f, 
-//				CameraRig.gameObject.transform.position.z);
-//		}
-//
-//		LLT.position = CLT.position;
-//		LRT.position = CRT.position;
-
-		Debug.Log ("left:"+ LeftController.transform.position);
-		Debug.Log ("right:"+ RightController.transform.position);
 		
 	}
 }
