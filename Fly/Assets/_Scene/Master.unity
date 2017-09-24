@@ -1378,6 +1378,8 @@ GameObject:
   - component: {fileID: 59497870}
   - component: {fileID: 59497875}
   - component: {fileID: 59497876}
+  - component: {fileID: 59497878}
+  - component: {fileID: 59497877}
   m_Layer: 0
   m_Name: LeftController
   m_TagString: Untagged
@@ -1568,6 +1570,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rcCar: {fileID: 135180290}
+--- !u!114 &59497877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59497868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc65878c7102524bb8c2bcfbefff497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playareaCursor: {fileID: 0}
+  directionIndicator: {fileID: 0}
+  customRaycast: {fileID: 0}
+  layersToIgnore:
+    serializedVersion: 2
+    m_Bits: 4
+  pointerOriginSmoothingSettings:
+    smoothsPosition: 0
+    maxAllowedPerFrameDistanceDifference: 0.003
+    smoothsRotation: 0
+    maxAllowedPerFrameAngleDifference: 1.5
+  validCollisionColor: {r: 0, g: 1, b: 0, a: 1}
+  invalidCollisionColor: {r: 1, g: 0, b: 0, a: 1}
+  tracerVisibility: 0
+  cursorVisibility: 0
+  maximumLength: 100
+  scaleFactor: 0.002
+  cursorScaleMultiplier: 25
+  cursorMatchTargetRotation: 0
+  cursorDistanceRescale: 0
+  maximumCursorScale: {x: Infinity, y: Infinity, z: Infinity}
+  customTracer: {fileID: 0}
+  customCursor: {fileID: 0}
+--- !u!114 &59497878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59497868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3d3423efa297c418680b9e3ffa0b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHoverState: 0
 --- !u!1 &67892217
 GameObject:
   m_ObjectHideFlags: 0
@@ -5844,7 +5892,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 220505799}
-  m_LocalRotation: {x: -0.13039498, y: -0.7205761, z: -0.6680776, w: 0.13205935}
+  m_LocalRotation: {x: -0.13039497, y: -0.72057605, z: -0.6680775, w: 0.13205934}
   m_LocalPosition: {x: 16.99, y: 0.56, z: -1.15}
   m_LocalScale: {x: 0.20000015, y: 0.73330235, z: 0.20000017}
   m_Children: []
@@ -21685,7 +21733,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1693832b5ea144e53b60de0085d0eb27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsDebug: 0
+  DebugCamera: 0
+  DebugLeftController: 0
+  DebugRightController: 0
+  DebugCameraMove: 0
   Camera: {fileID: 231761835}
   LeftController: {fileID: 239486775}
   RightController: {fileID: 1737010719}
@@ -45497,6 +45548,8 @@ GameObject:
   - component: {fileID: 1863400176}
   - component: {fileID: 1863400181}
   - component: {fileID: 1863400182}
+  - component: {fileID: 1863400184}
+  - component: {fileID: 1863400183}
   m_Layer: 0
   m_Name: RightController
   m_TagString: Untagged
@@ -45687,6 +45740,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rcCar: {fileID: 135180290}
+--- !u!114 &1863400183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1863400174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc65878c7102524bb8c2bcfbefff497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playareaCursor: {fileID: 0}
+  directionIndicator: {fileID: 0}
+  customRaycast: {fileID: 0}
+  layersToIgnore:
+    serializedVersion: 2
+    m_Bits: 4
+  pointerOriginSmoothingSettings:
+    smoothsPosition: 0
+    maxAllowedPerFrameDistanceDifference: 0.003
+    smoothsRotation: 0
+    maxAllowedPerFrameAngleDifference: 1.5
+  validCollisionColor: {r: 0, g: 1, b: 0, a: 1}
+  invalidCollisionColor: {r: 1, g: 0, b: 0, a: 1}
+  tracerVisibility: 0
+  cursorVisibility: 0
+  maximumLength: 100
+  scaleFactor: 0.002
+  cursorScaleMultiplier: 25
+  cursorMatchTargetRotation: 0
+  cursorDistanceRescale: 0
+  maximumCursorScale: {x: Infinity, y: Infinity, z: Infinity}
+  customTracer: {fileID: 0}
+  customCursor: {fileID: 0}
+--- !u!114 &1863400184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1863400174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3d3423efa297c418680b9e3ffa0b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHoverState: 0
 --- !u!1 &1864401662
 GameObject:
   m_ObjectHideFlags: 0
