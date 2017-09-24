@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class DebugScript : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class DebugScript : MonoBehaviour {
 	public bool DebugLeftController;
 	public bool DebugRightController;
 	public bool DebugCameraMove;
+	public bool DebugPointer;
 	public GameObject Camera;
 	public GameObject LeftController;
 	public GameObject RightController;
@@ -27,6 +29,8 @@ public class DebugScript : MonoBehaviour {
 		InputDebug ();
 
 		CameraMoveDebug ();
+
+		PointerDebug ();
 
 	}
 
@@ -56,5 +60,15 @@ public class DebugScript : MonoBehaviour {
 
 			Debug.Log ("CameraPosition:" + Camera.gameObject.transform.position);
 		}
+	}
+
+	void PointerDebug(){
+
+		if (DebugPointer == true) {
+
+			Debug.Log (LeftController.GetComponent<VRTK_PointerDirectionIndicator> ().transform.position);
+
+		}
+	
 	}
 }
