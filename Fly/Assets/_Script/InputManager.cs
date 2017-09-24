@@ -37,10 +37,11 @@ public class InputManager : MonoBehaviour {
 
 			LLT = CLT;
 			LRT = CRT;
-			Debug.Log (LLT.y, LRT.y);
+
+			Debug.Log ("LLT:" + LLT.y, "LRT:" + LRT.y);
 		}
 
-		Debug.Log (CLT.y, CRT.y);
+		Debug.Log ("CLT:" + CLT.y, "CRT:" + CRT.y);
 	}
 
 
