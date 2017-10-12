@@ -22,7 +22,7 @@ public class FloatMovement : MonoBehaviour {
 
 			Player.transform.position = new Vector3 (Player.transform.position.x, Player.transform.position.y + FloatSpeed, Player.transform.position.z);
 
-
+			Debug.Log (Player.transform.position);
 		}
 		
 	}
