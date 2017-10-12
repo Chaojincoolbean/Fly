@@ -60,7 +60,7 @@ public class FloatMovement : MonoBehaviour {
                 Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + FloatSpeed4, Player.transform.position.z);
             }
 
-            if (Player.transform.position.y > FloatEndPositionX)
+            if (Player.transform.position.y > FloatEndPositionY)
             {
                 FloatUpEnd = true;
                 FloatUpStopTime = Time.time;
@@ -72,7 +72,7 @@ public class FloatMovement : MonoBehaviour {
 
         Player.transform.position = new Vector3(Player.transform.position.x + FloatSpeed1, Player.transform.position.y, Player.transform.position.z);
 
-        if (Player.transform.position.x > FloatEndPositionY)
+        if (Player.transform.position.x > FloatEndPositionX)
         {
            FloatForwardEnd = true;
            //FloatUpStopTime = Time.time;
