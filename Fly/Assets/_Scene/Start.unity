@@ -5031,7 +5031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DyingHeartAudio: {fileID: 8300000, guid: fbd759b4c398f4890b9fa96305ab2d52, type: 3}
-  LoadTime: 125
+  LoadTime: 120
 --- !u!4 &1345409761
 Transform:
   m_ObjectHideFlags: 0
