@@ -1469,10 +1469,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &278381654 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224000013127654674, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
-    type: 2}
+--- !u!4 &278381654 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 278381653}
 --- !u!1 &281804996
 GameObject:
@@ -5841,11 +5840,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoPopulateObjectReferences: 1
   actualBoundaries: {fileID: 1729902976}
-  actualHeadset: {fileID: 130582241}
-  actualLeftController: {fileID: 681788225}
-  actualRightController: {fileID: 582178715}
-  modelAliasLeftController: {fileID: 1636770466}
-  modelAliasRightController: {fileID: 965664730}
+  actualHeadset: {fileID: 0}
+  actualLeftController: {fileID: 0}
+  actualRightController: {fileID: 0}
+  modelAliasLeftController: {fileID: 0}
+  modelAliasRightController: {fileID: 0}
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
