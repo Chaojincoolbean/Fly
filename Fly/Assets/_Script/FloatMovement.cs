@@ -36,7 +36,7 @@ public class FloatMovement : MonoBehaviour {
 
         if(FloatUpEnd == true && Time.time - FloatUpStopTime > MoveForwardStopTime && FloatForwardEnd == false)
         {
-            FloatForward();
+            //FloatForward();
         }       
 
 	}
@@ -62,8 +62,8 @@ public class FloatMovement : MonoBehaviour {
 
             if (Player.transform.position.y > FloatEndPositionY)
             {
-                FloatUpEnd = true;
-                FloatUpStopTime = Time.time;
+                //FloatUpEnd = true;
+                //FloatUpStopTime = Time.time;
             }
     }
 
