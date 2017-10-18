@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FloatMovement : MonoBehaviour {
 
@@ -62,6 +63,7 @@ public class FloatMovement : MonoBehaviour {
 
             if (Player.transform.position.y > FloatEndPositionY)
             {
+                SceneManager.LoadScene(2);
                 //FloatUpEnd = true;
                 //FloatUpStopTime = Time.time;
             }
