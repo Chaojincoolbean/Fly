@@ -4720,7 +4720,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -384
+      value: 314
       objectReference: {fileID: 0}
     - target: {fileID: 224000012484682510, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -5588,8 +5588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158ada2750fbd483c8b4a925d4515876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DyingHeartAudio: {fileID: 8300000, guid: fbd759b4c398f4890b9fa96305ab2d52, type: 3}
-  LoadTime: 120
+  DyingHeartAudio: {fileID: 8300000, guid: 90d4144b8d1cf4baa98ab0f1bb721052, type: 3}
+  LoadTime: 90
 --- !u!4 &1345409761
 Transform:
   m_ObjectHideFlags: 0
