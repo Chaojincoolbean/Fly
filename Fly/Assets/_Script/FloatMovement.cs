@@ -40,13 +40,13 @@ public class FloatMovement : MonoBehaviour {
         {
             FloatUp();
         }
-        /*
-        if (Player.transform.position.y > AccelerationPoint && MusicPlay == true)
+        
+        if (Time.time > StartTime-10f && MusicPlay == true)
         {
             AS.Play();
             MusicPlay = false;
         }
-        */
+       
         
 
     }
@@ -57,7 +57,7 @@ public class FloatMovement : MonoBehaviour {
         if(Player.transform.position.y > AccelerationPoint)
         {
             FloatSpeed += Acceleration;
-            AS.volume -=  Acceleration;
+            AS.volume -=  Acceleration*2;
         }
 
         if (Player.transform.position.y > AccelerationPoint2)

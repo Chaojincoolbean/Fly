@@ -3725,12 +3725,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 522055576}
-  StartTime: 10
+  StartTime: 20
   FloatSpeed: 0.001
   Acceleration: 0.00001
   MaxSpeed: 3
   AccelerationPoint: 4
-  AccelerationPoint2: 200
+  AccelerationPoint2: 100
   FloatEndPositionY: 2700
   MoveForwardStopTime: 1
   FloatForwardEnd: 0
@@ -3759,7 +3759,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8231ac66b61454e06825f10354fce1fb, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 0.7
   Loop: 0
@@ -6584,7 +6584,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 314
+      value: -384
       objectReference: {fileID: 0}
     - target: {fileID: 224000012484682510, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
