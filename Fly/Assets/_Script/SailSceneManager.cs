@@ -21,9 +21,7 @@ public class SailSceneManager : MonoBehaviour {
 
         if (other.gameObject.name == "[VRTK][AUTOGEN][BodyColliderContainer]")
         {
-            Debug.Log(other.gameObject.name);
             SceneManager.LoadScene(3);
-            Debug.Log(other.gameObject.name);
         }
     }
 }
