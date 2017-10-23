@@ -19,7 +19,7 @@ public class SailManager : MonoBehaviour {
 
 		if (Time.time > SailStartTime) {
 			Boat.SetActive (true);
-			
+            Sail();
 		}
 		
 	}

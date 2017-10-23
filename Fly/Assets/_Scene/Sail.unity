@@ -5779,8 +5779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Boat: {fileID: 1386162741}
   Player: {fileID: 1729902976}
-  SailStartTime: 10
-  SailSpeed: 1
+  SailStartTime: 20
+  SailSpeed: 0.001
 --- !u!1 &1549205632
 GameObject:
   m_ObjectHideFlags: 0
