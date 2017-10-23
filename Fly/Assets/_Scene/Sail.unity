@@ -1483,7 +1483,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 314
+      value: -384
       objectReference: {fileID: 0}
     - target: {fileID: 224000012484682510, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -3221,11 +3221,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
       propertyPath: m_LocalScale.x
-      value: 160
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
       propertyPath: m_LocalScale.z
-      value: 160
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
       propertyPath: m_IsActive
@@ -5745,6 +5745,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1507639616}
+  - component: {fileID: 1507639617}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5765,6 +5766,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507639617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507639615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300a1ce621975462aaf04998ac34b6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boat: {fileID: 1386162741}
+  Player: {fileID: 1729902976}
+  SailStartTime: 10
+  SailSpeed: 1
 --- !u!1 &1549205632
 GameObject:
   m_ObjectHideFlags: 0
