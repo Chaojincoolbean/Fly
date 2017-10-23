@@ -8,6 +8,9 @@ public class SailManager : MonoBehaviour {
 	public GameObject Player;
 	public float SailStartTime;
 	public float SailSpeed;
+    public GameObject Memories;
+    public GameObject BackgroundMusic;
+    public GameObject End;
 
 	// Use this for initialization
 	void Start () {
@@ -17,12 +20,27 @@ public class SailManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Time.time > SailStartTime) {
+        if (Time.time > SailStartTime-10f)
+        {
+            BackgroundMusic.SetActive(true);
+        }
+
+        if (Time.time > SailStartTime) {
 			Boat.SetActive (true);
             Sail();
 		}
-		
-	}
+
+        if (Time.time > SailStartTime + 20f)
+        {
+            Memories.SetActive(true);
+        }
+
+        if(Player.transform.position.z < -135f)
+        {
+            End.SetActive(true);
+        }
+
+    }
 
 	public void Sail(){
 
