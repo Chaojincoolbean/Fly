@@ -2423,7 +2423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400168, guid: 75c0f9dcac3684a118dcb280a7765e88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 400168, guid: 75c0f9dcac3684a118dcb280a7765e88, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3731,6 +3731,7 @@ MonoBehaviour:
   MaxSpeed: 3
   AccelerationPoint: 4
   AccelerationPoint2: 100
+  AccelerationPoint3: 500
   FloatEndPositionY: 2700
   MoveForwardStopTime: 1
   FloatForwardEnd: 0

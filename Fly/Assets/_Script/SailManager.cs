@@ -20,17 +20,18 @@ public class SailManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Time.time > SailStartTime-10f)
+        if (Time.timeSinceLevelLoad > SailStartTime-10f)
         {
             BackgroundMusic.SetActive(true);
         }
 
-        if (Time.time > SailStartTime) {
+        if (Time.timeSinceLevelLoad > SailStartTime) {
 			Boat.SetActive (true);
             Sail();
-		}
+  
+        }
 
-        if (Time.time > SailStartTime + 20f)
+        if (Time.timeSinceLevelLoad > SailStartTime + 60f)
         {
             Memories.SetActive(true);
         }

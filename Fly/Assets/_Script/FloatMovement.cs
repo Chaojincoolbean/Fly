@@ -16,7 +16,7 @@ public class FloatMovement : MonoBehaviour {
 //    public float FloatSpeed4;
     public float AccelerationPoint;
     public float AccelerationPoint2;
-//    public float SpeedupPoint3;
+    public float AccelerationPoint3;
 //    public float FloatEndPositionX;
     public float FloatEndPositionY;
     public float MoveForwardStopTime;
@@ -36,12 +36,13 @@ public class FloatMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Time.time > StartTime)
+        if (Time.timeSinceLevelLoad > StartTime)
         {
+            Debug.Log(Time.time);
             FloatUp();
         }
         
-        if (Time.time > StartTime-10f && MusicPlay == true)
+        if (Time.timeSinceLevelLoad > StartTime-10f && MusicPlay == true)
         {
             AS.Play();
             MusicPlay = false;
@@ -63,6 +64,12 @@ public class FloatMovement : MonoBehaviour {
         if (Player.transform.position.y > AccelerationPoint2)
         {
             FloatSpeed += Acceleration*30;
+            //AS.volume -= Acceleration;
+        }
+
+        if (Player.transform.position.y > AccelerationPoint2)
+        {
+            FloatSpeed += Acceleration * 50;
             //AS.volume -= Acceleration;
         }
 
