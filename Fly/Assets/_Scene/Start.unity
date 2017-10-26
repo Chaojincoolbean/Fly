@@ -3471,7 +3471,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -384
+      value: 314
       objectReference: {fileID: 0}
     - target: {fileID: 224000012484682510, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -6329,7 +6329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DyingHeartAudio: {fileID: 8300000, guid: 90d4144b8d1cf4baa98ab0f1bb721052, type: 3}
-  LoadTime: 90
+  LoadTime: 40
 --- !u!4 &1345409761
 Transform:
   m_ObjectHideFlags: 0

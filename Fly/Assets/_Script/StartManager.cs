@@ -8,14 +8,15 @@ public class StartManager : MonoBehaviour {
 	AudioSource AS;
 	public AudioClip DyingHeartAudio;
 	bool DyingHeartPlay = true;
+    bool LoadScene = false;
 	public int LoadTime;
 
 	// Use this for initialization
 	void Start () {
 
 		AS = this.gameObject.GetComponent<AudioSource> ();
-		
-	}
+        StartCoroutine(LoadNextScene());
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,8 +28,21 @@ public class StartManager : MonoBehaviour {
 		}
 
 		if (Time.time > LoadTime) {
-			SceneManager.LoadScene (1);
+
+            LoadScene = true;
+            //StartCoroutine(LoadNextScene());
 		}
 		
 	}
+
+    IEnumerator LoadNextScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+             
+    }
 }
