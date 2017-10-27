@@ -15,7 +15,6 @@ public class StartManager : MonoBehaviour {
 	void Start () {
 
 		AS = this.gameObject.GetComponent<AudioSource> ();
-        StartCoroutine(LoadNextScene());
     }
 	
 	// Update is called once per frame
@@ -29,11 +28,11 @@ public class StartManager : MonoBehaviour {
 
 		if (Time.time > LoadTime) {
 
-            LoadScene = true;
-            //StartCoroutine(LoadNextScene());
+            StartCoroutine(LoadNextScene());
 		}
-		
-	}
+
+
+    }
 
     IEnumerator LoadNextScene()
     {
@@ -41,7 +40,7 @@ public class StartManager : MonoBehaviour {
 
         while (!asyncLoad.isDone)
         {
-            yield return null;
+            yield return null; //wait
         }
              
     }

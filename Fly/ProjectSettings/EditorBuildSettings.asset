@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scene/Goodbye.unity
     guid: 326951a06fb3d2748a38dd706edbd60a
+  - enabled: 1
+    path: Assets/_Scene/Temporary End.unity
+    guid: 690801ef509d2ce4d9103835dff6d013

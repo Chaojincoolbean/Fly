@@ -26,6 +26,7 @@ public class SailManager : MonoBehaviour {
         }
 
         if (Time.timeSinceLevelLoad > SailStartTime) {
+
 			Boat.SetActive (true);
             Sail();
   
@@ -33,6 +34,7 @@ public class SailManager : MonoBehaviour {
 
         if (Time.timeSinceLevelLoad > SailStartTime + 60f)
         {
+            //BackgroundMusic.SetActive(true);
             Memories.SetActive(true);
         }
 

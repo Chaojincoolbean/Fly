@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class FloatMovement : MonoBehaviour {
 
 	public GameObject Player;
+    public GameObject BackgroundAudio;
 	public float StartTime;
 	public float FloatSpeed;
     public float Acceleration;
@@ -24,12 +25,14 @@ public class FloatMovement : MonoBehaviour {
     public bool MusicPlay = true;
     private float FloatUpStopTime = 0;
     public AudioSource AS;
+    public AudioSource BA;
 
 
     // Use this for initialization
     void Start () {
 
         AS = this.gameObject.GetComponent<AudioSource>();
+        BA = BackgroundAudio.GetComponent<AudioSource>();
 
 	}
 	
@@ -42,9 +45,10 @@ public class FloatMovement : MonoBehaviour {
             FloatUp();
         }
         
-        if (Time.timeSinceLevelLoad > StartTime-10f && MusicPlay == true)
+        if (Player.transform.position.y > AccelerationPoint && MusicPlay == true)
         {
             AS.Play();
+            //BA.Play();
             MusicPlay = false;
         }
        
@@ -58,18 +62,19 @@ public class FloatMovement : MonoBehaviour {
         if(Player.transform.position.y > AccelerationPoint)
         {
             FloatSpeed += Acceleration;
-            AS.volume -=  Acceleration*2;
+            //AS.volume -=  Acceleration*2;
         }
 
         if (Player.transform.position.y > AccelerationPoint2)
         {
             FloatSpeed += Acceleration*30;
+            AS.volume -= Acceleration * 2;
             //AS.volume -= Acceleration;
         }
 
         if (Player.transform.position.y > AccelerationPoint2)
         {
-            FloatSpeed += Acceleration * 50;
+            FloatSpeed += Acceleration * 30;
             //AS.volume -= Acceleration;
         }
 
