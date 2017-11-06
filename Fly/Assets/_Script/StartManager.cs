@@ -43,6 +43,11 @@ public class StartManager : MonoBehaviour {
 
         }
 
+		if (Time.time > 94f) {
+			
+			StartCoroutine(LoadNextScene());
+		}
+
     }
 
     IEnumerator LoadNextScene()
@@ -55,10 +60,10 @@ public class StartManager : MonoBehaviour {
 				yield return null; //wait
         }
 
-		while (Time.time > LoadTime) {
-			
-			 	yield return null; //wait
-		}
+//		while (Time.time < LoadTime) {
+//			
+//			 	yield return null; //wait
+//		}
              
     }
 }
