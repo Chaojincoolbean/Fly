@@ -10,6 +10,7 @@ public class StartManager : MonoBehaviour {
 	public GameObject Canvas;
 	public GameObject HeartBeatGroup;
 	public GameObject HeartBeatGroup1;
+    public GameObject HeartBeatGroup2;
 	public GameObject Mask;
 
 	// Use this for initialization
@@ -37,6 +38,16 @@ public class StartManager : MonoBehaviour {
 			HeartBeatGroup.SetActive (false);
 			HeartBeatGroup1.SetActive (true);
 		}
+
+        if (Time.time > 90f) {
+
+            Mask.SetActive(false);
+            HeartBeatGroup1.SetActive(false);
+            HeartBeatGroup2.SetActive(true);
+
+        }
+
+
 
 
     }

@@ -16,7 +16,7 @@ public class SelfRotate : MonoBehaviour {
 
 		transform.Rotate (Vector3.up * n * Time.deltaTime);
 
-		n = n - Time.time * 0.0001f;
+		n = n - Time.time * 0.00005f;
 
 		Debug.Log (n);
 		
