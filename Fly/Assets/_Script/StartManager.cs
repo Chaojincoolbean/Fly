@@ -16,7 +16,7 @@ public class StartManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		StartCoroutine(LoadNextScene());
+		//StartCoroutine(LoadNextScene());
 
     }
 	
