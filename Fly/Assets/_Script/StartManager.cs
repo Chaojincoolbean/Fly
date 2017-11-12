@@ -16,8 +16,6 @@ public class StartManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		//StartCoroutine(LoadNextScene());
-
     }
 	
 	// Update is called once per frame
@@ -45,7 +43,8 @@ public class StartManager : MonoBehaviour {
 
 		if (Time.time > 94f) {
 			
-			StartCoroutine(LoadNextScene());
+			//StartCoroutine(LoadNextScene());
+			SteamVR_LoadLevel.Begin("Moment",false,05,1,1,1,1);
 		}
 
     }
