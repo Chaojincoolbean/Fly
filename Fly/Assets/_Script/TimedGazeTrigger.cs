@@ -8,6 +8,7 @@ public class TimedGazeTrigger : MonoBehaviour {
 
 	[SerializeField] float timeLookedAt = 0f; //time in seconds, we've spent looking at this thing.
 	[SerializeField] Image progressImage;
+	public Camera PlayerCamera;
 
 	public UnityEvent OnGazeComplete = new UnityEvent(); 
 
@@ -20,9 +21,9 @@ public class TimedGazeTrigger : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Vector3 camLookDir = Camera.main.transform.forward;
+		Vector3 camLookDir = PlayerCamera.transform.forward;
 
-		Vector3 VectorFromCamToTarget = transform.position - Camera.main.transform.position;
+		Vector3 VectorFromCamToTarget = transform.position - PlayerCamera.transform.position;
 
 		float angle = Vector3.Angle (camLookDir, VectorFromCamToTarget);
 
@@ -32,8 +33,9 @@ public class TimedGazeTrigger : MonoBehaviour {
 			//did we reach 100%? if so, fire the event and reset
 			Debug.Log("timeLookedAt:"+ timeLookedAt);
 
-			if (timeLookedAt == 0.5f) {
-				timeLookedAt = 0f;
+			if (timeLookedAt >= 0.5f) {
+				//timeLookedAt = 0f;
+                //Debug.Log("invoke");
 				OnGazeComplete.Invoke ();	//fire any events accosiating this event
 			}
 		}

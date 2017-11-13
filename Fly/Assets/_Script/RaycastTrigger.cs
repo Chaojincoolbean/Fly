@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class RaycastTrigger : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Camera PlayerCamera;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		Ray ray = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
+        Ray ray = new Ray (PlayerCamera.transform.position, PlayerCamera.transform.forward);
 
 		RaycastHit rayHit = new RaycastHit();
 
 		if (Physics.Raycast (ray, out rayHit, 10000f)) {
-			if (rayHit.transform ==this.transform){
+            Debug.Log("hit");
+            if (rayHit.transform == this.transform){
+                Debug.Log("hit");
 				transform.localScale *= 1.1f;
 			}
 		}
