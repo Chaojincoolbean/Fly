@@ -17,7 +17,7 @@ public class LobbyManager : MonoBehaviour {
 
     public void LoadNextScene()
     {
-        SteamVR_LoadLevel.Begin("Start", false, 05, 1, 1, 1, 1);
+        SteamVR_LoadLevel.Begin("Start", false, 1, 1, 1, 1, 1);
         Debug.Log("start");
     }
 }
