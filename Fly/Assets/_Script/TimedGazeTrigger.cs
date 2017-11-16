@@ -35,7 +35,7 @@ public class TimedGazeTrigger : MonoBehaviour {
 
 			if (timeLookedAt >= 0.5f) {
 				//timeLookedAt = 0f;
-                //Debug.Log("invoke");
+                Debug.Log("invoke");
 				OnGazeComplete.Invoke ();	//fire any events accosiating this event
 			}
 		}
