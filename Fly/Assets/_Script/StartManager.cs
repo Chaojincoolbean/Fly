@@ -44,25 +44,25 @@ public class StartManager : MonoBehaviour {
 		if (Time.time > 94f) {
 			
 			//StartCoroutine(LoadNextScene());
-			SteamVR_LoadLevel.Begin("Moment",false,05,1,1,1,1);
-		}
+			SteamVR_LoadLevel.Begin("Moment", false, 1, 1, 1, 1, 1);
+        }
 
     }
 
-    IEnumerator LoadNextScene()
-    {
+//   IEnumerator LoadNextScene()
+//    {
         
-		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+//		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
 
-        while (!asyncLoad.isDone)
-        {
-				yield return null; //wait
-        }
+ //       while (!asyncLoad.isDone)
+//        {
+//				yield return null; //wait
+//        }
 
 //		while (Time.time < LoadTime) {
 //			
 //			 	yield return null; //wait
 //		}
              
-    }
+//    }
 }
