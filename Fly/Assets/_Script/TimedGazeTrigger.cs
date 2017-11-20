@@ -29,11 +29,11 @@ public class TimedGazeTrigger : MonoBehaviour {
 			
 			timeLookedAt =  Mathf.Clamp01(timeLookedAt + Time.deltaTime);	//after 1 second, this variable will be 1f
 			//did we reach 100%? if so, fire the event and reset
-			Debug.Log("timeLookedAt:"+ timeLookedAt);
+			//Debug.Log("timeLookedAt:"+ timeLookedAt);
 
-			if (timeLookedAt >= 0.5f) {
-				//timeLookedAt = 0f;
-                //Debug.Log("invoke");
+            if (timeLookedAt >= 1f) {
+                Debug.Log("invoke");
+                timeLookedAt = 0f;
 				OnGazeComplete.Invoke ();	//fire any events accosiating this event
 			}
 		}
