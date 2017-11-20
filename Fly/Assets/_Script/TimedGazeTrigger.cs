@@ -7,9 +7,7 @@ using UnityEngine.Events;
 public class TimedGazeTrigger : MonoBehaviour {
 
 	[SerializeField] float timeLookedAt = 0f; //time in seconds, we've spent looking at this thing.
-	[SerializeField] Image progressImage;
 	public Camera PlayerCamera;
-
 	public UnityEvent OnGazeComplete = new UnityEvent(); 
 
 
@@ -40,10 +38,9 @@ public class TimedGazeTrigger : MonoBehaviour {
 			}
 		}
 		else{
+			
 			timeLookedAt = Mathf.Clamp01 (timeLookedAt - Time.deltaTime);
 
 		}
-
-		progressImage.fillAmount = timeLookedAt;
 	}
 }

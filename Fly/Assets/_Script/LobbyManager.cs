@@ -8,7 +8,7 @@ public class LobbyManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        SteamVR_LoadLevel.Begin("Start", false, 05, 1, 1, 1, 1);
+        SteamVR_LoadLevel.Begin("Start", false, 1, 1, 1, 1, 1);
     }
 	
 	// Update is called once per frame
