@@ -8,7 +8,10 @@ public class TimedGazeTrigger : MonoBehaviour {
 
 	[SerializeField] float timeLookedAt = 0f; //time in seconds, we've spent looking at this thing.
 	public Camera PlayerCamera;
-	public UnityEvent OnGazeComplete = new UnityEvent(); 
+	public GameObject TitleEnglish;
+    public UnityEvent OnGazeComplete = new UnityEvent(); 
+    private Color TitleColor;
+    
 
 
 	// Use this for initialization
@@ -27,19 +30,30 @@ public class TimedGazeTrigger : MonoBehaviour {
 
 		if (angle < 15f *transform.localScale.x) {
 			
-			timeLookedAt =  Mathf.Clamp01(timeLookedAt + Time.deltaTime);	//after 1 second, this variable will be 1f
-			//did we reach 100%? if so, fire the event and reset
+			timeLookedAt =  timeLookedAt + Time.deltaTime;   //after 1 second, this variable will be 1f
+            Debug.Log("timeLookedAt:"+ timeLookedAt);
+            TitleColor.a = 1 - timeLookedAt/10;
+            Debug.Log(TitleColor.a);
+            
+            if(TitleColor.a < 0)
+            {
+                TitleColor.a = 0;
+            }
+            this.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
+            TitleEnglish.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
+            //Debug.Log(TitleColor.a);
 			//Debug.Log("timeLookedAt:"+ timeLookedAt);
 
-            if (timeLookedAt >= 1f) {
+            if (TitleColor.a == 0) {
                 Debug.Log("invoke");
-                timeLookedAt = 0f;
+                //timeLookedAt = 0f;
 				OnGazeComplete.Invoke ();	//fire any events accosiating this event
 			}
 		}
+
 		else{
 			
-			timeLookedAt = Mathf.Clamp01 (timeLookedAt - Time.deltaTime);
+			//timeLookedAt = Mathf.Clamp01 (timeLookedAt - Time.deltaTime);
 
 		}
 	}
