@@ -7,8 +7,10 @@ public class FlyManager : MonoBehaviour
 {
 
     public GameObject Player;
+    public GameObject Ride;
     public float FlySpeed;
     public float StartTime;
+    
 
 
     // Use this for initialization
@@ -35,6 +37,8 @@ public class FlyManager : MonoBehaviour
     {
     
         Player.transform.position = new Vector3(Player.transform.position.x + FlySpeed, Player.transform.position.y, Player.transform.position.z);
-    
+        Ride.transform.position = Player.transform.position;
+
+
     }
 }
