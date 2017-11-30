@@ -21,19 +21,19 @@ public class StartManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Time.time > 15f) {
+		if (Time.timeSinceLevelLoad > 15f) {
 			Canvas.SetActive (false);
 			HeartBeatGroup.SetActive (true);
 			Mask.SetActive (true);
 		}
 
-		if (Time.time > 83f) {
+		if (Time.timeSinceLevelLoad > 83f) {
 		
 			HeartBeatGroup.SetActive (false);
 			HeartBeatGroup1.SetActive (true);
 		}
 
-        if (Time.time > 90f) {
+        if (Time.timeSinceLevelLoad > 90f) {
 
             Mask.SetActive(false);
             HeartBeatGroup1.SetActive(false);
@@ -41,7 +41,7 @@ public class StartManager : MonoBehaviour {
 
         }
 
-		if (Time.time > 94f) {
+		if (Time.timeSinceLevelLoad > 94f) {
 			
 			//StartCoroutine(LoadNextScene());
 			SteamVR_LoadLevel.Begin("Moment", false, 1, 1, 1, 1, 1);

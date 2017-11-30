@@ -11,11 +11,14 @@ public class TimedGazeTrigger : MonoBehaviour {
 	public GameObject TitleEnglish;
     public UnityEvent OnGazeComplete = new UnityEvent(); 
     private Color TitleColor;
+    private AudioSource As;
     
 
 
 	// Use this for initialization
 	void Start () {
+
+        As = this.gameObject.GetComponent<AudioSource>();
 		
 	}
 	
@@ -33,6 +36,7 @@ public class TimedGazeTrigger : MonoBehaviour {
 			timeLookedAt =  timeLookedAt + Time.deltaTime;   //after 1 second, this variable will be 1f
             Debug.Log("timeLookedAt:"+ timeLookedAt);
             TitleColor.a = 1 - timeLookedAt/10;
+            As.volume = As.volume - timeLookedAt / 8000;
             Debug.Log(TitleColor.a);
             
             if(TitleColor.a < 0)
