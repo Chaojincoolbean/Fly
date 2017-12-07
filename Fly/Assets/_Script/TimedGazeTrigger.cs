@@ -12,6 +12,9 @@ public class TimedGazeTrigger : MonoBehaviour {
     public UnityEvent OnGazeComplete = new UnityEvent(); 
     private Color TitleColor;
     private AudioSource As;
+
+	public GameObject Lobby;
+	public GameObject Dying;
     
 
 
@@ -45,20 +48,14 @@ public class TimedGazeTrigger : MonoBehaviour {
             }
             this.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
             TitleEnglish.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
-            //Debug.Log(TitleColor.a);
-			//Debug.Log("timeLookedAt:"+ timeLookedAt);
 
             if (TitleColor.a == 0) {
                 Debug.Log("invoke");
                 //timeLookedAt = 0f;
-				OnGazeComplete.Invoke ();	//fire any events accosiating this event
+				//OnGazeComplete.Invoke ();	//fire any events accosiating this event
+				Dying.SetActive(true);
+				Lobby.SetActive (false);
 			}
-		}
-
-		else{
-			
-			//timeLookedAt = Mathf.Clamp01 (timeLookedAt - Time.deltaTime);
-
 		}
 	}
 }
