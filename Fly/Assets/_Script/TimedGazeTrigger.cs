@@ -8,6 +8,7 @@ public class TimedGazeTrigger : MonoBehaviour {
 
 	[SerializeField] float timeLookedAt = 0f; //time in seconds, we've spent looking at this thing.
 	public Camera PlayerCamera;
+    public Camera PlayerCamera2;
 	public GameObject TitleEnglish;
     public UnityEvent OnGazeComplete = new UnityEvent(); 
     private Color TitleColor;
@@ -55,6 +56,7 @@ public class TimedGazeTrigger : MonoBehaviour {
 				//OnGazeComplete.Invoke ();	//fire any events accosiating this event
 				Dying.SetActive(true);
 				Lobby.SetActive (false);
+                PlayerCamera2.GetComponent<Camera>().clearFlags = CameraClearFlags.SolidColor;
 			}
 		}
 	}
