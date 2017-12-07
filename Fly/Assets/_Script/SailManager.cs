@@ -11,28 +11,34 @@ public class SailManager : MonoBehaviour {
     public GameObject Memories;
     public GameObject BackgroundMusic;
     public GameObject End;
+    public float Loadtime;
 
 	// Use this for initialization
 	void Start () {
+
+        Player.transform.position = new Vector3(0f, 0f, 0f);
+        Loadtime = 0f;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (Time.timeSinceLevelLoad > SailStartTime-10f)
+        Loadtime = Loadtime + Time.deltaTime;
+
+        if (Loadtime > SailStartTime-10f)
         {
             BackgroundMusic.SetActive(true);
         }
 
-        if (Time.timeSinceLevelLoad > SailStartTime) {
+        if (Loadtime > SailStartTime) {
 
 			Boat.SetActive (true);
             Sail();
   
         }
 
-        if (Time.timeSinceLevelLoad > SailStartTime + 60f)
+        if (Loadtime > SailStartTime + 60f)
         {
             //BackgroundMusic.SetActive(true);
             Memories.SetActive(true);

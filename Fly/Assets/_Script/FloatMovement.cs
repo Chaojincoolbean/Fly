@@ -7,6 +7,7 @@ public class FloatMovement : MonoBehaviour {
 
 	public GameObject Player;
     public GameObject BackgroundAudio;
+    public float LoadTime;
 	public float StartTime;
 	public float FloatSpeed;
     public float Acceleration;
@@ -26,6 +27,10 @@ public class FloatMovement : MonoBehaviour {
     private float FloatUpStopTime = 0;
     public AudioSource AS;
     public AudioSource BA;
+    public GameObject Moment;
+    public GameObject Sail;
+    public Camera PlayerCamera;
+    public Color SailColor;
 
 
     // Use this for initialization
@@ -33,16 +38,20 @@ public class FloatMovement : MonoBehaviour {
 
         AS = this.gameObject.GetComponent<AudioSource>();
         BA = BackgroundAudio.GetComponent<AudioSource>();
+        LoadTime = 0f;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (Time.timeSinceLevelLoad > StartTime)
+        LoadTime = LoadTime + Time.deltaTime;
+        
+
+        if (LoadTime > StartTime)
         {
-            Debug.Log(Time.time);
             FloatUp();
+            Debug.Log("called");
         }
         
         if (Player.transform.position.y > AccelerationPoint && MusicPlay == true)
@@ -51,8 +60,6 @@ public class FloatMovement : MonoBehaviour {
             BA.Play();
             MusicPlay = false;
         }
-       
-        
 
     }
 
@@ -103,21 +110,11 @@ public class FloatMovement : MonoBehaviour {
 //
             if (Player.transform.position.y > FloatEndPositionY)
             {
-            SceneManager.LoadScene(2);
+                Sail.SetActive(true);
+                Moment.SetActive(false);
+                PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.SolidColor;
+            PlayerCamera.GetComponent<Camera>().backgroundColor = SailColor;
 
-            }
+        }
     }
-
-//    void FloatForward()
-//    {
-//
-//        Player.transform.position = new Vector3(Player.transform.position.x + FloatSpeed1, Player.transform.position.y, Player.transform.position.z);
-//
-//        if (Player.transform.position.x > FloatEndPositionX)
-//        {
-//           FloatForwardEnd = true;
-//           //FloatUpStopTime = Time.time;
-//        }
-//
-//    }
 }
