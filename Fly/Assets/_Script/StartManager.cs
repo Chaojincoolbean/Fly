@@ -34,13 +34,7 @@ public class StartManager : MonoBehaviour {
 			Mask.SetActive (true);
 		}
 
-		if (LoadTime > 83f) {
-		
-			HeartBeatGroup.SetActive (false);
-			HeartBeatGroup1.SetActive (true);
-		}
-
-        if (LoadTime > 90f) {
+        if (LoadTime > 144f) {
 
             Mask.SetActive(false);
             HeartBeatGroup1.SetActive(false);
