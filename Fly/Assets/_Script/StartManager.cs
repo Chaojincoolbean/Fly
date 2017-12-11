@@ -28,7 +28,7 @@ public class StartManager : MonoBehaviour {
 
         LoadTime = LoadTime + Time.deltaTime;
 
-		if (LoadTime > 15f) {
+		if (LoadTime > 20f) {
 			Canvas.SetActive (false);
 			HeartBeatGroup.SetActive (true);
 			Mask.SetActive (true);
@@ -48,7 +48,7 @@ public class StartManager : MonoBehaviour {
 
         }
 
-		if (LoadTime > 94f) {
+		if (LoadTime > 160f) {
 
             Moment.SetActive(true);
             Dying.SetActive(false);
