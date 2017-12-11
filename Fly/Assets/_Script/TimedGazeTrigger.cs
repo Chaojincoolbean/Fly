@@ -10,7 +10,7 @@ public class TimedGazeTrigger : MonoBehaviour {
 	public Camera PlayerCamera;
     public Camera PlayerCamera2;
 	public GameObject TitleEnglish;
-    public UnityEvent OnGazeComplete = new UnityEvent(); 
+    //public UnityEvent OnGazeComplete = new UnityEvent(); 
     private Color TitleColor;
     private AudioSource As;
 
@@ -35,24 +35,21 @@ public class TimedGazeTrigger : MonoBehaviour {
 
 		float angle = Vector3.Angle (camLookDir, VectorFromCamToTarget);
 
-		if (angle < 15f *transform.localScale.x) {
+		if (angle < 15f * transform.localScale.x) {
 			
 			timeLookedAt =  timeLookedAt + Time.deltaTime;   //after 1 second, this variable will be 1f
-            Debug.Log("timeLookedAt:"+ timeLookedAt);
             TitleColor.a = 1 - timeLookedAt/10;
             As.volume = As.volume - timeLookedAt / 8000;
-            Debug.Log(TitleColor.a);
             
             if(TitleColor.a < 0)
             {
                 TitleColor.a = 0;
             }
+
             this.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
             TitleEnglish.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
 
             if (TitleColor.a == 0) {
-                Debug.Log("invoke");
-                //timeLookedAt = 0f;
 				//OnGazeComplete.Invoke ();	//fire any events accosiating this event
 				Dying.SetActive(true);
 				Lobby.SetActive (false);

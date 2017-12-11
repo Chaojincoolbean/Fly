@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class StartManager : MonoBehaviour {
 
-    bool LoadScene = false;
 	public float LoadTime;
 	public GameObject Canvas;
 	public GameObject HeartBeatGroup;
@@ -28,9 +27,6 @@ public class StartManager : MonoBehaviour {
 	void Update () {
 
         LoadTime = LoadTime + Time.deltaTime;
-
-        Debug.Log(LoadTime);
-
 
 		if (LoadTime > 15f) {
 			Canvas.SetActive (false);
