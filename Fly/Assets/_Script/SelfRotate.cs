@@ -6,6 +6,7 @@ public class SelfRotate : MonoBehaviour {
 
 	public float LoadTime;
 	public float n;
+    public float i;
 
 	// Use this for initialization
 	void Start () {
@@ -20,9 +21,7 @@ public class SelfRotate : MonoBehaviour {
 
 		transform.Rotate (Vector3.up * n * Time.deltaTime);
 
-		n = n - LoadTime * 0.00005f;
-
-		Debug.Log (n);
+		n = n - LoadTime* i;
 		
 	}
 }

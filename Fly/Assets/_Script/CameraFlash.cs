@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class CameraFlash : MonoBehaviour {
 
-	public float flashTimeLength = 0.2f;
+	public float flashTimeLength;
 	public bool doCameraFlash = true;
+    public int FlashTimes;
 
 	private Image flashImage;
 	private float startTime;
@@ -24,7 +25,20 @@ public class CameraFlash : MonoBehaviour {
 		if(doCameraFlash && !flashing)
 		{
 			Flash();
+            FlashTimes = FlashTimes + 1;
+            Debug.Log(FlashTimes);
+
 		}
+
+        if(FlashTimes >10)
+        {
+            flashTimeLength = 6.0f;
+        }
+
+        if(FlashTimes > 13)
+        {
+            this.gameObject.SetActive(false);
+        }
 //		else
 //		{
 //			doCameraFlash = false;
