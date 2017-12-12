@@ -10,6 +10,7 @@ public class TimedGazeTrigger : MonoBehaviour {
 	public Camera PlayerCamera;
     public Camera PlayerCamera2;
 	public GameObject TitleEnglish;
+    public GameObject Name;
     //public UnityEvent OnGazeComplete = new UnityEvent(); 
     private Color TitleColor;
     private AudioSource As;
@@ -48,6 +49,7 @@ public class TimedGazeTrigger : MonoBehaviour {
 
             this.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
             TitleEnglish.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
+            Name.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
 
             if (TitleColor.a == 0) {
 				//OnGazeComplete.Invoke ();	//fire any events accosiating this event
