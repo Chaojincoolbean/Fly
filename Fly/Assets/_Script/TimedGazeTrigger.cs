@@ -12,7 +12,7 @@ public class TimedGazeTrigger : MonoBehaviour {
 	public GameObject TitleEnglish;
     public GameObject Name;
     //public UnityEvent OnGazeComplete = new UnityEvent(); 
-    private Color TitleColor;
+    public Color TitleColor;
     private AudioSource As;
 
 	public GameObject Lobby;

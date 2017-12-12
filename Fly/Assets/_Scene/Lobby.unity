@@ -3210,6 +3210,14 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
   m_IsPrefabParent: 0
@@ -3811,6 +3819,7 @@ MonoBehaviour:
   PlayerCamera2: {fileID: 928913703}
   TitleEnglish: {fileID: 1177611060}
   Name: {fileID: 1034491453}
+  TitleColor: {r: 0.8862745, g: 0.22745098, b: 0.22745098, a: 1}
   Lobby: {fileID: 545073996}
   Dying: {fileID: 716028983}
 --- !u!82 &360750961
@@ -3928,7 +3937,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2869f05bff7234a998ae887beb140ed6, type: 3}
-  m_Color: {r: 0.1544118, g: 0.12148575, b: 0.12148575, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9669,6 +9678,14 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
   m_IsPrefabParent: 0
@@ -13548,7 +13565,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b7b942d964ca94834a52c118ad0e8375, type: 3}
-  m_Color: {r: 0.1544118, g: 0.12148575, b: 0.12148575, a: 1}
+  m_Color: {r: 0.8308824, g: 0.6292712, b: 0.6292712, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
