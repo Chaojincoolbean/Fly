@@ -56,7 +56,7 @@ public class FloatMovement : MonoBehaviour {
         
         if (Player.transform.position.y > AccelerationPoint && MusicPlay == true)
         {
-            AS.Play();
+            //AS.Play();
             //BA.Play();
             MusicPlay = false;
         }
