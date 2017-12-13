@@ -30,12 +30,12 @@ public class CameraFlash : MonoBehaviour {
 
 		}
 
-        if(FlashTimes >10)
+        if(FlashTimes >5)
         {
             flashTimeLength = 6.0f;
         }
 
-        if(FlashTimes > 13)
+        if(FlashTimes > 7)
         {
             this.gameObject.SetActive(false);
         }
