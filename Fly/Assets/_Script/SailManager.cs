@@ -43,8 +43,8 @@ public class SailManager : MonoBehaviour {
 
 	public void Sail(){
 
-		Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y - DrowingSpeed, Player.transform.position.z - SailSpeed);
-		Boat.transform.position = new Vector3(Boat.transform.position.x, Boat.transform.position.y - DrowingSpeed, Boat.transform.position.z - SailSpeed);
+		Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y - DrowingSpeed, Player.transform.position.z + SailSpeed);
+		Boat.transform.position = new Vector3(Boat.transform.position.x, Boat.transform.position.y - DrowingSpeed, Boat.transform.position.z + SailSpeed);
 
 	}
 }
