@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99999905, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.99974084, g: 0.99974084, b: 0.99974084, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -866,7 +866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &68705713
 Transform:
   m_ObjectHideFlags: 0
@@ -2275,7 +2275,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 42f68cbccb5648340b4095c8f387abb2, type: 2}
     - target: {fileID: 106448, guid: 24256176751bad5448dd9dff840c91bc, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 438138, guid: 24256176751bad5448dd9dff840c91bc, type: 2}
       propertyPath: m_LocalScale.x
@@ -2910,6 +2910,30 @@ Prefab:
     - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
       propertyPath: ShapeModule.radiusThickness
@@ -6156,7 +6180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &545073997
 Transform:
   m_ObjectHideFlags: 0
@@ -13697,17 +13721,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boat: {fileID: 268374595}
-  Water: {fileID: 0}
+  Water: {fileID: 1506256667}
   Player: {fileID: 1663464129}
   PlayerCamera: {fileID: 928913700}
   SailScene: {fileID: 68705712}
   Lobby: {fileID: 545073996}
   SailStartTime: 20
   SailSpeed: 0.001
-  DrowingSpeed: 0.0001
+  DrowingSpeed: 0.00005
   BackgroundMusic: {fileID: 906649639}
   Loadtime: 0
-  Drown: -1.5
+  Drown: 0
   LobbySkybox: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1299422527
 GameObject:
@@ -19300,7 +19324,7 @@ MonoBehaviour:
   AS: {fileID: 0}
   BA: {fileID: 0}
   Moment: {fileID: 2053358785}
-  Sail: {fileID: 0}
+  Sail: {fileID: 68705712}
   PlayerCamera: {fileID: 928913703}
   SailColor: {r: 0.6784314, g: 0.7529412, b: 0.9647059, a: 0.019607844}
   Moonnight: {fileID: 2100000, guid: 07113b9aad7e17645817356bffad5b00, type: 2}
