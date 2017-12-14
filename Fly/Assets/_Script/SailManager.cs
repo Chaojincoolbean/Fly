@@ -39,7 +39,7 @@ public class SailManager : MonoBehaviour {
   
         }
 
-		if(Player.transform.position.y < Water.transform.position.y)
+		if(PlayerCamera.transform.position.y < Water.transform.position.y)
         {
 			Lobby.SetActive(true);
 			SailScene.SetActive (false);
