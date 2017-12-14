@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0012684156, g: 0.0028555708, b: 0.0046194447, a: 1}
+  m_IndirectSpecularColor: {r: 0.0012636464, g: 0.0028438182, b: 0.0045867534, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -866,7 +866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &68705713
 Transform:
   m_ObjectHideFlags: 0
@@ -882,6 +882,10 @@ Transform:
   - {fileID: 906649641}
   - {fileID: 1285859201}
   - {fileID: 402068874}
+  - {fileID: 1397092671}
+  - {fileID: 706296694}
+  - {fileID: 155619935}
+  - {fileID: 1049186325}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1315,7 +1319,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 155619934}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1324,8 +1328,8 @@ Transform:
   - {fileID: 399075524}
   - {fileID: 56230118}
   - {fileID: 797464284}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 68705713}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &158628883
 Prefab:
@@ -2906,6 +2910,10 @@ Prefab:
     - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
       propertyPath: ShapeModule.radiusThickness
@@ -7838,7 +7846,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 706296693}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7847,8 +7855,8 @@ Transform:
   - {fileID: 26312928}
   - {fileID: 1443896203}
   - {fileID: 889558012}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 68705713}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &713092136
 GameObject:
@@ -11271,7 +11279,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1049186324}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11280,8 +11288,8 @@ Transform:
   - {fileID: 603909438}
   - {fileID: 46292774}
   - {fileID: 765811968}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 68705713}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1059811124
 GameObject:
@@ -13682,12 +13690,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Boat: {fileID: 268374595}
   Player: {fileID: 1663464129}
+  PlayerCamera: {fileID: 928913700}
+  SailScene: {fileID: 68705712}
+  Lobby: {fileID: 545073996}
   SailStartTime: 20
   SailSpeed: 0.001
   DrowingSpeed: 0.0001
   BackgroundMusic: {fileID: 906649639}
   Loadtime: 0
   Drown: -1.5
+  LobbySkybox: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1299422527
 GameObject:
   m_ObjectHideFlags: 0
@@ -14750,7 +14762,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397092670}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14759,8 +14771,8 @@ Transform:
   - {fileID: 773705137}
   - {fileID: 1095830876}
   - {fileID: 2140884057}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 68705713}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427992452
 GameObject:
@@ -19282,6 +19294,7 @@ MonoBehaviour:
   Sail: {fileID: 0}
   PlayerCamera: {fileID: 928913703}
   SailColor: {r: 0.6784314, g: 0.7529412, b: 0.9647059, a: 0.019607844}
+  Moonnight: {fileID: 2100000, guid: 07113b9aad7e17645817356bffad5b00, type: 2}
 --- !u!1 &1849537344
 GameObject:
   m_ObjectHideFlags: 0

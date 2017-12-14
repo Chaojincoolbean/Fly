@@ -5,13 +5,18 @@ using UnityEngine;
 public class SailManager : MonoBehaviour {
 
 	public GameObject Boat;
+	public GameObject Water;
 	public GameObject Player;
+	public GameObject PlayerCamera;
+	public GameObject SailScene;
+	public GameObject Lobby;
 	public float SailStartTime;
 	public float SailSpeed;
 	public float DrowingSpeed;
     public GameObject BackgroundMusic;
     public float Loadtime;
 	public float Drown;
+	public Material LobbySkybox;
 
 
 	// Use this for initialization
@@ -34,10 +39,18 @@ public class SailManager : MonoBehaviour {
   
         }
 
-		if(Player.transform.position.y < Drown)
+		if(Player.transform.position.y < Water.transform.position.y)
         {
-            //End.SetActive(true);
+			Lobby.SetActive(true);
+			SailScene.SetActive (false);
+			PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;
+			//PlayerCamera.GetComponent<Camera>().backgroundColor = SailColor;
+			RenderSettings.skybox = LobbySkybox;
         }
+
+		if (Boat.transform.position.y < Water.transform.position.y) {
+			Boat.SetActive (false);
+		}
 
     }
 

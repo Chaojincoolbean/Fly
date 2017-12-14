@@ -31,6 +31,7 @@ public class FloatMovement : MonoBehaviour {
     public GameObject Sail;
     public Camera PlayerCamera;
     public Color SailColor;
+	public Material Moonnight;
 
 
     // Use this for initialization
@@ -112,8 +113,9 @@ public class FloatMovement : MonoBehaviour {
             {
                 Sail.SetActive(true);
                 Moment.SetActive(false);
-                PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.SolidColor;
-                PlayerCamera.GetComponent<Camera>().backgroundColor = SailColor;
+				PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;
+                //PlayerCamera.GetComponent<Camera>().backgroundColor = SailColor;
+				RenderSettings.skybox = Moonnight;
 
         }
     }
