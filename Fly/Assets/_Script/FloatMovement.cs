@@ -113,7 +113,7 @@ public class FloatMovement : MonoBehaviour {
                 Sail.SetActive(true);
                 Moment.SetActive(false);
                 PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.SolidColor;
-            PlayerCamera.GetComponent<Camera>().backgroundColor = SailColor;
+                PlayerCamera.GetComponent<Camera>().backgroundColor = SailColor;
 
         }
     }
