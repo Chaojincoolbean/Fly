@@ -76,7 +76,7 @@ public class FloatMovement : MonoBehaviour {
         if (Player.transform.position.y > AccelerationPoint2)
         {
             FloatSpeed += Acceleration*30;
-            AS.volume -= Acceleration * 2;
+            //AS.volume -= Acceleration * 2;
             //AS.volume -= Acceleration;
         }
 
