@@ -48,7 +48,7 @@ public class SailManager : MonoBehaviour {
 			RenderSettings.skybox = LobbySkybox;
         }
 
-		if (Boat.transform.position.y < Water.transform.position.y) {
+		if (Boat.transform.position.y < Water.transform.position.y - 0.5f) {
 			Boat.SetActive (false);
 		}
 
