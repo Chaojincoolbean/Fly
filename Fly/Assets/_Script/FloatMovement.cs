@@ -113,7 +113,8 @@ public class FloatMovement : MonoBehaviour {
             {
                 Sail.SetActive(true);
                 Moment.SetActive(false);
-				PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;
+                LoadTime = 0f;
+            PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;
                 //PlayerCamera.GetComponent<Camera>().backgroundColor = SailColor;
 				RenderSettings.skybox = Moonnight;
 

@@ -24,8 +24,8 @@ public class TimedGazeTrigger : MonoBehaviour {
 	void Start () {
 
         As = this.gameObject.GetComponent<AudioSource>();
-		
-	}
+        timeLookedAt = 0f;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -52,8 +52,10 @@ public class TimedGazeTrigger : MonoBehaviour {
             Name.gameObject.GetComponent<SpriteRenderer>().color = TitleColor;
 
             if (TitleColor.a == 0) {
-				//OnGazeComplete.Invoke ();	//fire any events accosiating this event
-				Dying.SetActive(true);
+                //OnGazeComplete.Invoke ();	//fire any events accosiating this event
+                //Loadtime = 0f;
+                timeLookedAt = 0f;
+                Dying.SetActive(true);
 				Lobby.SetActive (false);
                 PlayerCamera2.GetComponent<Camera>().clearFlags = CameraClearFlags.SolidColor;
 			}

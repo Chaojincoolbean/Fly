@@ -19,7 +19,7 @@ public class StartManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        LoadTime = 0;
+        LoadTime = 0f;
 
     }
 	
@@ -47,6 +47,7 @@ public class StartManager : MonoBehaviour {
 
 		if (LoadTime > 115f) {
 
+            LoadTime = 0f;
             Moment.SetActive(true);
             Dying.SetActive(false);
             PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;

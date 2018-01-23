@@ -41,9 +41,12 @@ public class SailManager : MonoBehaviour {
 
 		if(PlayerCamera.transform.position.y < Water.transform.position.y)
         {
-			Lobby.SetActive(true);
+
+            Loadtime = 0f;
+            Lobby.SetActive(true);
 			SailScene.SetActive (false);
-			PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;
+            Player.transform.position = new Vector3(0f, 0f, 0f);
+            PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;
 			//PlayerCamera.GetComponent<Camera>().backgroundColor = SailColor;
 			RenderSettings.skybox = LobbySkybox;
         }
@@ -58,6 +61,7 @@ public class SailManager : MonoBehaviour {
 
 		Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y - DrowingSpeed, Player.transform.position.z + SailSpeed);
 		Boat.transform.position = new Vector3(Boat.transform.position.x, Boat.transform.position.y - DrowingSpeed, Boat.transform.position.z + SailSpeed);
+        
 
 	}
 }
